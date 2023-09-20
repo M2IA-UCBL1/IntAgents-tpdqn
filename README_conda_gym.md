@@ -45,10 +45,22 @@ cd X
 pip install -r requirements.txt
 ```
 7. Installation de gymnasium
+- Sur __Linux__ ou __Mac__: 
 ```
 pip install gymnasium
 pip install gymnasium[box2d]
 ```
+-  Sur __Windows__:
+```
+pip install swig
+```
+Ensuite aller sur https://visualstudio.microsoft.com/visual-cpp-build-tools/
+ -> cliquer sur" Télécharger Build tools", puis lancer l'installer installé. Lors du choix, sélectionner "Desktop Development with C++"
+Une fois installé:
+```
+pip install gymnasium[box2d]
+```
+
 
 8. Vous pouvez maintenant lancer le notebook ([Jupyter](https://jupyter.org)) pour faire votre TP:
 ```
