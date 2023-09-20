@@ -45,11 +45,6 @@ cd X
 pip install -r requirements.txt
 ```
 7. Installation de gymnasium
-- Sur __Linux__ ou __Mac__: 
-```
-pip install gymnasium
-pip install gymnasium[box2d]
-```
 -  Sur __Windows__:
 ```
 pip install swig
@@ -60,6 +55,13 @@ Une fois installé:
 ```
 pip install gymnasium[box2d]
 ```
+
+- Sur __Linux__ ou __Mac__: 
+```
+pip install gymnasium
+pip install gymnasium[box2d]
+```
+
 
 
 8. Vous pouvez maintenant lancer le notebook ([Jupyter](https://jupyter.org)) pour faire votre TP:
