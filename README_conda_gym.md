@@ -56,12 +56,17 @@ Une fois installé:
 pip install gymnasium[box2d]
 ```
 
-- Sur __Linux__ ou __Mac__: 
+- Sur __Linux__: 
 ```
 pip install gymnasium
 pip install gymnasium[box2d]
 ```
-
+- Sur __Mac__:
+```
+conda install -c conda-forge gymnasium
+conda install swig
+conda install -c conda-forge gym-box2d
+```
 
 
 8. Vous pouvez maintenant lancer le notebook ([Jupyter](https://jupyter.org)) pour faire votre TP:
