@@ -6,7 +6,7 @@ Ci-dessous:
 1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2023`:
 
 ```
-conda create --name tpdeeprl2023 python=3.11
+conda create --name tpdeeprl2023 python=3.10
 conda activate tpdeeprl2023
 ```
 
@@ -17,10 +17,15 @@ A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2023) <User>
 
 2. Installation de PyTorch et torchvision:
 
--  Sur __Mac__ or __Windows__: 
+-  Sur __Windows__: 
 ```
 conda install pytorch==2.0.1  torchvision -c pytorch
 conda install m2-base
+```
+- Sur __Mac__:
+```
+conda install pytorch==2.0.1  torchvision -c pytorch
+
 ```
 - Sur __Linux__ : 
 ```
@@ -53,13 +58,13 @@ Ensuite aller sur https://visualstudio.microsoft.com/visual-cpp-build-tools/
  -> cliquer sur" Télécharger Build tools", puis lancer l'installer installé. Lors du choix, sélectionner "Desktop Development with C++"
 Une fois installé:
 ```
-pip install "gymnasium[box2d]"
+pip install gymnasium[box2d]
 ```
 
 - Sur __Linux__: 
 ```
 pip install gymnasium
-pip install "gymnasium[box2d]"
+pip install gymnasium[box2d]
 ```
 - Sur __Mac__:
 ```
