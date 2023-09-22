@@ -53,13 +53,13 @@ Ensuite aller sur https://visualstudio.microsoft.com/visual-cpp-build-tools/
  -> cliquer sur" Télécharger Build tools", puis lancer l'installer installé. Lors du choix, sélectionner "Desktop Development with C++"
 Une fois installé:
 ```
-pip install gymnasium[box2d]
+pip install "gymnasium[box2d]"
 ```
 
 - Sur __Linux__: 
 ```
 pip install gymnasium
-pip install gymnasium[box2d]
+pip install "gymnasium[box2d]"
 ```
 - Sur __Mac__:
 ```
