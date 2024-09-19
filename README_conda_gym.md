@@ -6,13 +6,13 @@ Ci-dessous:
 1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2023`:
 
 ```
-conda create --name tpdeeprl2023 python=3.10
-conda activate tpdeeprl2023
+conda create --name tpdeeprl2024 python=3.10
+conda activate tpdeeprl2024
 ```
 
-A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2023) <User>: `. 
+A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2024) <User>: `. 
 
-`(tpdeeprl2023)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
+`(tpdeeprl2024)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
 
 
 2. Installation de PyTorch et torchvision:
