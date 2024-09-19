@@ -74,11 +74,8 @@ conda install -c conda-forge gym-box2d
 ```
 
 
-8. Vous pouvez maintenant lancer le notebook ([Jupyter](https://jupyter.org)) pour faire votre TP:
-```
-jupyter-lab
-```
-et commencer à compléter le fichier `TPDQN.ipynb`.
+8. Vous pouvez maintenant  commencer à compléter le notebook `TPDQN.ipynb` pour faire votre TP, soit avec `jupyter-lab`, ou (conseillé) avec l'[extension Jupyter de VisualStudio](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) qui vous permet de debugger votre notebook.
+
 
 ## Sources
 
