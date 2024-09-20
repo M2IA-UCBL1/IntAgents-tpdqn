@@ -14,4 +14,4 @@ Dans ce TP, vous devrez suivre les consignes qui sont dans le notebook `TPDQN.ip
 Vous devrez compléter les fichiers suivants:
 - le notebook `TPDQN.ipynb` 
 - différents fichiers python (voir les consignes dans le notebook)
-- rendre un rapport (à ajouter à votre dépôt) avec les résultats des expérimentations
+
