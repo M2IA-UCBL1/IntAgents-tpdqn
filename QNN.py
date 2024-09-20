@@ -1,26 +1,26 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import numpy as np
 
 class QNN(nn.Module):
     """Reseau de neurones pour approximer la Q fonction."""
 
-    def __init__(self, seed=0):
+    def __init__(self,input_dim:int, output_dim:int):
         """Initialisation des parametres ...
-        Params
-        ======
-            seed (int): Random seed
         """
         super(QNN, self).__init__()
-        self.seed = torch.manual_seed(seed)
         
         "*** TODO ***"
         
-    def forward(self, state):
+    def forward(self, state: np.ndarray) -> torch.Tensor :
         """Forward pass"""
-        
-        "*** TODO ***"
+
+        if isinstance(state, np.ndarray):
+            state = torch.tensor(state, dtype=torch.float)
             
+        "*** TODO ***"
+        
         return state
 
 

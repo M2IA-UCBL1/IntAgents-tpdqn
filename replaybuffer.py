@@ -8,39 +8,44 @@ import torch.optim as optim
 
 
 class ReplayBuffer:
-    """Buffer de taille fixe pour mémoriser les tuples d'expériences rencontrés."""
+    """Buffer de taille fixe pour mémoriser les transitions rencontrées."""
 
-    def __init__(self,  buffer_size : int , batch_size : int , seed=0):
+    def __init__(self,  taille_buffer : int , taille_batch : int ):
         """Constructeur.
 
         Params
         ======
-            buffer_size (int): taille max du buffer
-            batch_size (int): taille d'un batch
-            seed (int): random seed
+            taille_buffer : taille max du buffer
+            taille_batch : taille d'un batch
         """
-        self.memory = deque(maxlen=buffer_size)  
-        self.batch_size = batch_size
-        self.seed = random.seed(seed)
-        
-        #TODO / TOCOMPLETE
-        self.experience = namedtuple("Experience", field_names=["done"])
+        self.memory = deque(maxlen=taille_buffer)  
+        self.batch_size = taille_batch
 
-    #TODO / TOCOMPLETE
-    def add(self, done):
-        """Ajout d'une experience au buffer."""
+        self.transition = namedtuple("Transition", field_names=["state", "action", "reward", "next_state", "done"])
+
+
+    def add(self, state: np.ndarray, action: np.ndarray, reward: float, next_state: np.ndarray, done: bool):
+        """Ajout d'une transition au buffer."""
+        e = self.transition(state, action, reward, next_state, done)
+       
+        self.memory.append(e)
+
         
         
     
     def sample(self):
-        """Recuperation d'un minibatch de données aléatoires dans le buffer."""
-        experiences = random.sample(self.memory, k=self.batch_size) 
-
-        #TODO / TOCOMPLETE
-        dones = torch.from_numpy(np.vstack([e.done for e in experiences if e is not None]).astype(np.uint8)).float()
+        """Recuperation d'un minibatch de données aléatoires dans le buffer.
         
-  
-        return (dones)
+        """
+        transitions = random.sample(self.memory, k=self.batch_size) 
+      
+        states = torch.from_numpy(np.vstack([e.state for e in transitions if e is not None])).float()
+        actions = torch.from_numpy(np.vstack([e.action for e in transitions if e is not None])).long() 
+        rewards = torch.from_numpy(np.vstack([e.reward for e in transitions if e is not None])).float()
+        next_states = torch.from_numpy(np.vstack([e.next_state for e in transitions if e is not None])).float()
+        dones = torch.from_numpy(np.vstack([e.done for e in transitions if e is not None]).astype(np.uint8)).float()
+     
+        return (states, actions, rewards, next_states, dones)
 
     def __len__(self):
         """Taille courante du buffer."""

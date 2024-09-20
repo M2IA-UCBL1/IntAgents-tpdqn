@@ -12,15 +12,23 @@ import torch.optim as optim
 
 
 class AgentDQN():
-    """Agent qui utilise l'algorithme DQN."""
+    """Agent qui utilise l'algorithme de deep QLearning avec replaybuffer."""
 
-    def __init__(self, seed=0):
+    def __init__(self, state_size:int, action_size:int, gamma=0.99):
         """Constructeur.
         
-        Params
-        ======
-            seed (int): random seed
-        """
-        self.seed = random.seed(seed)
 
+        """
+        self.state_size = state_size
+        self.action_size = action_size
         
+
+    def sampling_step(self,state : np.ndarray ,action : np.ndarray ,reward: float,next_state: np.ndarray ,done: bool):
+        return 0
+        
+    def train_step(self):
+        return 0
+    
+    
+    def act_egreedy(self, state : np.ndarray ,eps: float = 0.0) -> int:
+        return 0

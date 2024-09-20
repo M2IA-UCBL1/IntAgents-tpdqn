@@ -7,15 +7,17 @@ from QNN import QNN
 class AgentGlouton():
     """Agent qui utilise la prédiction de son réseau de neurones pour choisir ses actions selon une stratégie d’exploration (pas d'apprentissage)."""
 
-    def __init__(self, seed=0):
-        """Constructeur.
-        
-        Params
-        ======
-            seed (int): random seed
+    def __init__(self):
         """
-        self.seed = random.seed(seed)
 
+        """
+
+    def act_egreedy(self, state : np.ndarray , eps: float = 0.0) -> int:
+        """
+            eps: probabilité d'exploration
+        """
+        
+        return 0
     
         
 

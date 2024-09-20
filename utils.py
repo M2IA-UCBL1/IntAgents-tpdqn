@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import pandas as pd
+import seaborn as sns
 
 def plot_sumrwdperepi(sum_rewards):
     "trace courbe de somme des rec par episodes"
@@ -26,5 +27,17 @@ def plot_sumrwd_mean_perepi(sum_rewards,avgs):
     plt.show()
     
     
+def plot_sumrwdperepi_overseed(rewards_over_seeds:list):
+    """
+    trace courbe de somme des rec par episodes moyenne + std sur plusieurs seeds
 
+    """
+    rewards_to_plot = [[reward[0] for reward in rewards] for rewards in rewards_over_seeds]
+    df1 = pd.DataFrame(rewards_to_plot).melt()
+    df1.rename(columns={"variable": "episodes", "value": "rwd"}, inplace=True)
+    sns.set(style="darkgrid", context="talk", palette="rainbow")
+    sns.lineplot(x="episodes", y="rwd",  data=df1, estimator=np.mean, errorbar='sd').set(
+        title=""
+    )
+    plt.show()
     
