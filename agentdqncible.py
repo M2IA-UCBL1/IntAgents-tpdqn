@@ -11,8 +11,8 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 
-class AgentDQN():
-    """Agent qui utilise l'algorithme de deep QLearning avec replaybuffer."""
+class AgentDQNCible():
+    """Agent qui utilise l'algorithme DQN avec réseau cible."""
 
     def __init__(self, dim_etat:int, dim_action:int, gamma=0.99):
         """Constructeur.

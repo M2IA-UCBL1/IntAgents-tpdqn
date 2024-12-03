@@ -4,7 +4,7 @@ import torch
 
 from QNN import QNN
 
-class AgentGlouton():
+class AgentSimple():
     """Agent qui utilise la prédiction de son réseau de neurones pour choisir ses actions selon une stratégie d’exploration (pas d'apprentissage)."""
 
     def __init__(self):
@@ -12,7 +12,7 @@ class AgentGlouton():
 
         """
 
-    def act_egreedy(self, state : np.ndarray , eps: float = 0.0) -> int:
+    def action_egreedy(self, etat : np.ndarray , eps: float = 0.0) -> int:
         """
             eps: probabilité d'exploration
         """
