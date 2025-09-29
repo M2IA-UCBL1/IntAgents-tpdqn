@@ -6,13 +6,13 @@ Ci-dessous:
 1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2023`:
 
 ```
-conda create --name tpdeeprl2024 python=3.10
-conda activate tpdeeprl2024
+conda create --name tpdeeprl2025 python=3.10
+conda activate tpdeeprl2025
 ```
 
-A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2024) <User>: `. 
+A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2025) <User>: `. 
 
-`(tpdeeprl2024)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
+`(tpdeeprl2025)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
 
 
 2. Installation de PyTorch et torchvision:
@@ -63,8 +63,8 @@ pip install gymnasium[box2d]
 
 - Sur __Linux__: 
 ```
-pip install gymnasium
-pip install gymnasium[box2d]
+conda install conda-forge::gymnasium
+conda install conda-forge::gymnasium-box2d
 ```
 - Sur __Mac__:
 ```
