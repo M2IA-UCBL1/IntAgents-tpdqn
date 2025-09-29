@@ -32,8 +32,8 @@ def plot_sumrwdperepi_overseed(rewards_over_seeds:list):
     trace courbe de somme des rec par episodes moyenne + std sur plusieurs seeds
 
     """
-    rewards_to_plot = [[reward[0] for reward in rewards] for rewards in rewards_over_seeds]
-    df1 = pd.DataFrame(rewards_to_plot).melt()
+    #rewards_to_plot = [[reward[0] for reward in rewards] for rewards in rewards_over_seeds]
+    df1 = pd.DataFrame(rewards_over_seeds).melt()
     df1.rename(columns={"variable": "episodes", "value": "rwd"}, inplace=True)
     sns.set(style="darkgrid", context="talk", palette="rainbow")
     sns.lineplot(x="episodes", y="rwd",  data=df1, estimator=np.mean, errorbar='sd').set(
