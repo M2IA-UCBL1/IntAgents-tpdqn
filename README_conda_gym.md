@@ -3,7 +3,7 @@ Ci-dessous:
 * pour Mac et Linux, les commandes sont à faire dans un terminal classique. 
 * Pour Windows, il faut utiliser **Anaconda prompt** et pas un terminal de commande classique (taper "Anaconda Prompt" dans la barre de recherche Windows). 
 
-1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2023`:
+1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2025`:
 
 ```
 conda create --name tpdeeprl2025 python=3.10
