@@ -23,7 +23,7 @@ class AgentDQN():
         self.action_size = dim_action
         
 
-    def phase_echantillonage(self,etat : np.ndarray ,action : np.ndarray ,recompense: float,etat_suivant: np.ndarray ,terminaison: bool):
+    def phase_interaction(self,etat : np.ndarray ,action : np.ndarray ,recompense: float,etat_suivant: np.ndarray ,terminaison: bool):
         return 0
         
     def phase_apprentissage(self):
