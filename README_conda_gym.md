@@ -3,16 +3,16 @@ Ci-dessous:
 * pour Mac et Linux, les commandes sont à faire dans un terminal classique. 
 * Pour Windows, il faut utiliser **Anaconda prompt** et pas un terminal de commande classique (taper "Anaconda Prompt" dans la barre de recherche Windows). 
 
-1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2025`:
+1. Créer (et activer) un nouvel environnement, appelé `tpdeeprl2026`:
 
 ```
-conda create --name tpdeeprl2025 python=3.10
-conda activate tpdeeprl2025
+conda create --name tpdeeprl2026 python=3.10
+conda activate tpdeeprl2026
 ```
 
-A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2025) <User>: `. 
+A ce niveau, votre ligne de commande doit ressembler à : `(tpdeeprl2026) <User>: `. 
 
-`(tpdeeprl2025)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
+`(tpdeeprl2026)` indique que l'environnement créé est actif, et vous pouvez maintenant installer des packages dans l'environnement.
 
 
 2. Installation de PyTorch et torchvision:
@@ -32,24 +32,24 @@ conda install pytorch==2.0.1  torchvision -c pytorch
 conda install pytorch=2.0.1 -c pytorch 
 pip install torchvision
 ```
-4. Git
+3. Git
 
 Dans la suite il est supposé que `git` est installé sur votre machine. Si ce n'est pas le cas, vous pouvez utiliser `conda`pour l'installer:
 ```
 conda install git
 ```
 
-5. Cloner le dépôt créé *via* githubclassroom et aller dans le dossier du dépôt:
+4. Cloner le dépôt créé *via* githubclassroom et aller dans le dossier du dépôt:
 ```
 git clone https://github.com/X.git
 cd X
 ```
 
-6. Installation des packages spécifiés dans le fichier *requirements.txt*.
+5. Installation des packages spécifiés dans le fichier *requirements.txt*.
 ```
 pip install -r requirements.txt
 ```
-7. Installation de gymnasium
+6. Installation de [gymnasium](https://gymnasium.farama.org/)
 -  Sur __Windows__:
 ```
 pip install swig
@@ -74,12 +74,12 @@ conda install -c conda-forge gym-box2d
 ```
 
 
-8. Vous pouvez maintenant  commencer à compléter le notebook `TPDQN.ipynb` pour faire votre TP, soit avec `jupyter-lab`, ou (conseillé) avec l'[extension Jupyter de VisualStudio](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) qui vous permet de debugger votre notebook.
+7. Vous pouvez maintenant  commencer à compléter le notebook `TPDQN.ipynb` pour faire votre TP, soit avec `jupyter-lab`, ou (conseillé) avec l'[extension Jupyter de VisualStudio](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) qui vous permet de debugger votre notebook.
 
 
 ## Sources
 
-- si besoin, utiliser ([google colab](https://colab.research.google.com/?hl=fr)), version cloud de jupyter notebook qui  permet d'accéder gratuitement à des ressources informatiques, dont des GPU (limité).
+
 - Un tutoriel sur les [Jupyter notebook](https://python.sdv.univ-paris-diderot.fr/18_jupyter/)
 - Vous pouvez lister les environnements conda installés :
 ```
