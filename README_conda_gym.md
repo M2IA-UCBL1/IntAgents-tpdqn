@@ -39,7 +39,7 @@ Dans la suite il est supposé que `git` est installé sur votre machine. Si ce n
 conda install git
 ```
 
-4. Cloner le dépôt créé *via* githubclassroom et aller dans le dossier du dépôt:
+4. Cloner le dépôt du TP et aller dans le dossier du dépôt:
 ```
 git clone https://github.com/X.git
 cd X
